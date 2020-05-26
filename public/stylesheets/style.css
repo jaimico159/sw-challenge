@@ -1,18 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
 nav.sw-nav {
-  height: 60px;
+  height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin: 20px 10px;
+  padding: 5px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
 }
 
 .nav-el {
   flex-grow: 1;
+  display: flex;
+  flex-direction: row;
 }
 
+.align-right {
+  justify-content: flex-end;
+}
 
+.align-left {
+  justify-content: flex-start;
+}
 
-a {
-  color: #00B7FF;
+.nav-el .left {
+  align-items: start;
+  flex-grow: 1;
+}
+
+.nav-el .right-button {
+  align-items: flex-end;
+  width: 150px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.nav-el .right-button:hover {
+  background-color: azure;
+  cursor: pointer;
 }

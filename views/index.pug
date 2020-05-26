@@ -2,14 +2,16 @@ extends layout
 
 block content
   nav(class="sw-nav")
-    div(class="nav-el")
+    div(class="nav-el align-left")
       img(src="/images/sw.webp", alt="Star Wars", height="60", width="70")
-    h3(class="nav-el") STAR WARS APP
-    input(class="nav-el")
-
+    div(class="nav-el align-right")
+      div(class="right-button") PERSONAJES
+      div(class="right-button") PERSES
+      div(class="right-button") PERAJES
+      div(class="right-button") PERSONAJES
+    
   section
-  div(id="hello")
+    div(id="hello")
 
-  script(type="module",src="javascripts/application.js")
-
+  script(type="module",src="javascripts/application.js")  
 
