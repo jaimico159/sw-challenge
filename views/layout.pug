@@ -5,4 +5,15 @@ html
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    nav(class="sw-nav")
+      div(class="nav-el align-left")
+        img(src="/images/sw.webp", alt="Star Wars", height="60", width="70")
+      div(class="nav-el align-right")
+        a(href='/films' class="right-button") FILMS
+        a(href='/people' class="right-button") PEOPLE
+        a(href='/planets' class="right-button") PLANETS
+        a(href='/species' class="right-button") SPECIES
+        a(href='/starships' class="right-button") STARSHIPS
+        a(href='/vehicles' class="right-button") VEHICLES
+
     block content

@@ -25,12 +25,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/films", filmsRouter);
-app.use("/people", peopleRouter);
-app.use("/planets", planetsRouter);
-app.use("/species", speciesRouter);
-app.use("/starships", starshipsRouter);
-app.use("/vehicles", vehiclesRouter);
+app.use("films/", filmsRouter);
+app.use("/people/", peopleRouter);
+app.use("/planets/", planetsRouter);
+app.use("/species/", speciesRouter);
+app.use("/starships/", starshipsRouter);
+app.use("/vehicles/", vehiclesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
