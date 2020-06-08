@@ -1,10 +1,10 @@
 import baseUrl from "./queries/config.js";
 import peopleTable from "./templates/people_templates.js";
 
-class Vehicle {
+class Planet {
   constructor(el) {
     this.element = el;
-    this.fetchUrl = "vehicles/";
+    this.fetchUrl = "planets/";
     this.people = null;
   }
 
