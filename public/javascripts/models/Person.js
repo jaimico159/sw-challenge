@@ -1,10 +1,10 @@
-import baseUrl from "./queries/config.js";
-import peopleTable from "./templates/people_templates.js";
+import baseUrl from "../queries/config.js";
+import peopleTable from "../templates/people_templates.js";
 
-class Planet {
+class Person {
   constructor(el) {
     this.element = el;
-    this.fetchUrl = "planets/";
+    this.fetchUrl = "people/";
     this.people = null;
   }
 

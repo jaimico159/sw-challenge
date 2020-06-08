@@ -1,14 +1,14 @@
-import baseUrl from "./queries/config.js";
-import peopleTable from "./templates/people_templates.js";
+import baseUrl from "../queries/config.js";
+import peopleTable from "../templates/people_templates.js";
 
-class Film {
+class Vehicle {
   constructor(el) {
     this.element = el;
-    this.fetchUrl = "films/";
+    this.fetchUrl = "vehicles/";
     this.people = null;
   }
 
-  setFilms() {
+  setPeople() {
     let clazz = this;
     $.ajax({
       url: baseUrl + this.fetchUrl,
