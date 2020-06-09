@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  color: white;
+  background-image: url('../images/star-wars-backgrounds-25.jpg');
 }
 
 nav.sw-nav {
@@ -18,6 +20,7 @@ nav.sw-nav {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  color: #ffe81f;
 }
 
 .align-right {
@@ -44,4 +47,34 @@ nav.sw-nav {
 .nav-el .right-button:hover {
   background-color: azure;
   cursor: pointer;
+}
+
+/* Text Colors */
+.banana-yellow {
+  color: #ffe81f;
+}
+
+/* Link Colors */
+a:link {
+  color: #ffe81f;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffe81f;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ffe81f;
+  background-color: transparent;
+  text-decoration: underline;
 }
