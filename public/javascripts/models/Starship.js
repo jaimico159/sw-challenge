@@ -1,26 +1,26 @@
 import baseUrl from "../queries/config.js";
-import peopleTable from "../templates/people_templates.js";
+import starshipsTable from "../templates/starships_templates.js";
 
 class Starship {
   constructor(el) {
     this.element = el;
     this.fetchUrl = "starships/";
-    this.people = null;
+    this.starships = null;
   }
 
-  setPeople() {
+  setStarships() {
     let clazz = this;
     $.ajax({
       url: baseUrl + this.fetchUrl,
       success: function (response) {
         console.log(response);
-        let table = peopleTable(response);
+        let table = starshipsTable(response);
         console.log(table);
         clazz.element.append(table);
-        clazz.people = response;
+        clazz.starships = response;
       },
     });
   }
 }
 
-export default Person;
+export default Starship;

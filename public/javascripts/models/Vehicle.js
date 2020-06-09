@@ -1,26 +1,26 @@
 import baseUrl from "../queries/config.js";
-import peopleTable from "../templates/people_templates.js";
+import vehiclesTable from "../templates/vehicles_templates.js";
 
 class Vehicle {
   constructor(el) {
     this.element = el;
     this.fetchUrl = "vehicles/";
-    this.people = null;
+    this.vehicles = null;
   }
 
-  setPeople() {
+  setVehicles() {
     let clazz = this;
     $.ajax({
       url: baseUrl + this.fetchUrl,
       success: function (response) {
         console.log(response);
-        let table = peopleTable(response);
+        let table = vehiclesTable(response);
         console.log(table);
         clazz.element.append(table);
-        clazz.people = response;
+        clazz.vehicles = response;
       },
     });
   }
 }
 
-export default Person;
+export default Vehicle;

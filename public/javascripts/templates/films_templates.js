@@ -4,24 +4,25 @@ const filmsTable = (films) => {
     <th>Title</th>
     <th>Director</th>
     <th>Producer</th>
-    <th>Height</th>
-    <th>Mass</th>
+    <th>URL</th>
+    <th>Opening Crawl</th>
     <th>Release Date</th>
   </tr>
   ${films.results
     .map((film) => {
       return `
       <tr>
-        <td>${film.name}</td>
-        <td>${film.birth}</td>
-        <td>${film.gender}</td>
-        <td>${film.height}</td>
-        <td>${film.mass}</td>
-        <td>${film.skin_color}</td>
+        <td>${film.title}</td>
+        <td>${film.director}</td>
+        <td>${film.producer}</td>
+        <td>${film.url}</td>
+        <td>${film.opening_crawl}</td>
+        <td>${film.release_date}</td>
       </tr>
     `;
     })
     .join("")}
 </table>`;
 };
-export default fimlsTable;
+
+export default filmsTable;

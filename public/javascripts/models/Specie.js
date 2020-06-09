@@ -1,26 +1,26 @@
 import baseUrl from "../queries/config.js";
-import peopleTable from "../templates/people_templates.js";
+import speciesTable from "../templates/species_templates.js";
 
 class Specie {
   constructor(el) {
     this.element = el;
     this.fetchUrl = "species/";
-    this.people = null;
+    this.species = null;
   }
 
-  setPeople() {
+  setSpecies() {
     let clazz = this;
     $.ajax({
       url: baseUrl + this.fetchUrl,
       success: function (response) {
         console.log(response);
-        let table = peopleTable(response);
+        let table = speciesTable(response);
         console.log(table);
         clazz.element.append(table);
-        clazz.people = response;
+        clazz.species = response;
       },
     });
   }
 }
 
-export default Person;
+export default Specie;
