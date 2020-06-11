@@ -21,21 +21,21 @@ body {
 .card {
   display: flex;
   align-items: flex-start;
-  height: 200px;
-  margin: 3px;
-  padding: 5px;
+  margin: 10px;
   border-radius: 5px;
-  background-color: grey;
+  background-color: rgb(35, 35, 35);
+  align-items: center;
 }
 
 .card-item-info {
+  padding: 10px;
   flex-grow: 2;
   width: 600px;
   display: grid;
   justify-items: start;
   align-content: center;
   align-items: center;
-  grid-template-rows: 50px 50px 50px 50px;
+  grid-template-rows: 40px 20px 20px 100px;
 }
 
 .card-item-info .title{
@@ -63,6 +63,9 @@ body {
 .card-item-img {
   flex-grow: 1;
   max-width: 300px;
+  border-left: rgb(255, 215, 50);
+  border-left-width: 1px;
+  border-left-style: solid;
 }
 
 .card-item-img img {

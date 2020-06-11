@@ -33,9 +33,9 @@ const filmCards = (films) => {
         <div class="card">
           <div class="card-item-info">
             <span class="title">${film.title}</span>
-            <span class="director">${film.director}</span>
-            <span class="producer">${film.producer}</span>
-            <span class="title">${film.release_date}</span>
+            <span class="director">Directed by: ${film.director}</span>
+            <span class="producer">Produced by: ${film.producer}</span>
+            <span class="title">Released: ${film.release_date}</span>
           </div>
           <div class="card-item-img">
             <img alt="IMAGEN" src="https://images.unsplash.com/photo-1547700055-b61cacebece9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
