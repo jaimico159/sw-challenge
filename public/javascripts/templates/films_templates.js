@@ -16,7 +16,7 @@ const filmsTable = (films) => {
         <td>${film.director}</td>
         <td>${film.producer}</td>
         <td>${film.url}</td>
-        <td>${film.opening_crawl}</td>
+        <td class="wrappable">${film.opening_crawl}</td>
         <td>${film.release_date}</td>
       </tr>
     `;
@@ -25,4 +25,24 @@ const filmsTable = (films) => {
 </table>`;
 };
 
-export default filmsTable;
+const filmCards = (films) => {
+  return `
+  ${films.results
+    .map((film) => {
+      return `
+        <div class="card">
+          <div class="card-item-info">
+            <span class="title">${film.title}</span>
+            <span class="director">${film.director}</span>
+            <span class="producer">${film.producer}</span>
+            <span class="title">${film.release_date}</span>
+          </div>
+          <div class="card-item-img">
+          </div>
+        </div>`;
+    })
+    .join("")}
+  `;
+};
+
+export { filmsTable, filmCards };

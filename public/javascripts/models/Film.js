@@ -1,5 +1,5 @@
 import baseUrl from "../queries/config.js";
-import filmsTable from "../templates/films_templates.js";
+import { filmCards } from "../templates/films_templates.js";
 
 class Film {
   constructor(el) {
@@ -14,7 +14,7 @@ class Film {
       url: baseUrl + this.fetchUrl,
       success: function (response) {
         console.log(response);
-        let table = filmsTable(response);
+        let table = filmCards(response);
         console.log(table);
         clazz.element.append(table);
         clazz.films = response;
