@@ -38,6 +38,7 @@ const filmCards = (films) => {
             <span class="title">${film.release_date}</span>
           </div>
           <div class="card-item-img">
+            <img alt="IMAGEN" src="https://images.unsplash.com/photo-1547700055-b61cacebece9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
           </div>
         </div>`;
     })
