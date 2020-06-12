@@ -1,3 +1,6 @@
+@import './nav.css';
+@import './card.css';
+
 *{
   padding: 0;
   margin: 0;
@@ -11,114 +14,9 @@ body {
   background-size: cover;
 }
 
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.card {
-  display: flex;
-  align-items: flex-start;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: rgb(35, 35, 35);
-  align-items: center;
-}
-
-.card-item-info {
-  padding: 10px;
-  flex-grow: 2;
-  width: 600px;
-  display: grid;
-  justify-items: start;
-  align-content: center;
-  align-items: center;
-  grid-template-rows: 40px 20px 20px 100px;
-}
-
-.card-item-info .title{
-  grid-row-start: auto;
-  color: aliceblue;
-  font-size: 18px;
-  font-family: DIN, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-}
-
-.card-item-info .director{
-  grid-row-start: auto;
-  color: aliceblue;
-  font-size: 14px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.card-item-info .producer{
-  grid-row-start: auto;
-  color: aliceblue;
-  font-size: 12px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.card-item-img {
-  flex-grow: 1;
-  max-width: 300px;
-  border-left: rgb(255, 215, 50);
-  border-left-width: 1px;
-  border-left-style: solid;
-}
-
-.card-item-img img {
-  width: 100%
-}
-
 .wrappable {
   width: 250px;
   word-wrap: break-word;
-}
-
-nav.sw-nav {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-}
-
-.nav-el {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  color: #ffe81f;
-}
-
-.align-right {
-  justify-content: flex-end;
-}
-
-.align-left {
-  justify-content: flex-start;
-}
-
-.nav-el .left {
-  align-items: start;
-  flex-grow: 1;
-}
-
-.nav-el .right-button {
-  align-items: flex-end;
-  width: 150px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-}
-
-.nav-el .right-button:hover {
-  background-color: azure;
-  cursor: pointer;
 }
 
 /* Text Colors */
