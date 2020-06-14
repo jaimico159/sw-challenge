@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.sw-nav {
+  position: absolute;
+  height: 52px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.sw-nav .logo {
+  margin-left: 33px;
+  color: #F2F2F2;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0125em;
+}
+
+.side-nav {
+  position: absolute;
+  width: 350px;
+  height: 100%;
+  margin-left: 0px;
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-nav .elem {
+  height: 69px;
+  width: 100%;
+
+}

@@ -24,4 +24,20 @@ const peopleTable = (people) => {
     .join("")}
 </table>`;
 };
-export default peopleTable;
+
+const peopleSideNav = (people) => {
+  return `
+    ${people.results
+      .map((person) => {
+        return `
+        <div class="elem">
+          <span>${person.name}</span>
+          <span>${person.birth}</span>
+        </div>
+      `;
+      })
+      .join("")}
+  `;
+};
+
+export { peopleTable, peopleSideNav };

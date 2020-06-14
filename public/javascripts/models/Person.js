@@ -1,5 +1,5 @@
 import baseUrl from "../queries/config.js";
-import peopleTable from "../templates/people_templates.js";
+import { peopleSideNav } from "../templates/people_templates.js";
 
 class Person {
   constructor(el) {
@@ -10,11 +10,13 @@ class Person {
 
   setPeople() {
     let clazz = this;
+    this.element.html("Loading ...");
     $.ajax({
       url: baseUrl + this.fetchUrl,
       success: function (response) {
+        clazz.element.html("");
         console.log(response);
-        let table = peopleTable(response);
+        let table = peopleSideNav(response);
         console.log(table);
         clazz.element.append(table);
         clazz.people = response;
