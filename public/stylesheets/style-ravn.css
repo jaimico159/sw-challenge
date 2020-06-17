@@ -62,9 +62,18 @@
 
 .elem .button-container {
   grid-row: auto;
+  display: grid;
+  align-content: center;
+  height: 100%;
+}
+
+.elem .button-container:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .button-container .center {
+  grid-row: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
