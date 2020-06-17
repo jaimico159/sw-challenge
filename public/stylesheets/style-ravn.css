@@ -34,10 +34,60 @@
   margin-top: 52px;
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.15);
 }
 
 .side-nav .elem {
   height: 69px;
   width: 100%;
-
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  grid-template-rows: 1;
+  align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
 }
+
+.elem .info {
+  grid-row: auto;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 2;
+  align-items: center;
+  justify-items: start;
+  align-content: center;
+  margin-left: 15px;
+}
+
+.elem .button-container {
+  grid-row: auto;
+}
+
+.button-container .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info .name {
+  grid-row: auto;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #333333;
+  letter-spacing: 0.0125em;
+}
+
+.info .procedence {
+  grid-row: auto;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #828282;
+  letter-spacing: 0.0125em;
+}
+
