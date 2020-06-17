@@ -25,22 +25,22 @@ const peopleTable = (people) => {
 </table>`;
 };
 
-const peopleSideNav = (people) => {
-  return Promise.all(
-    people.results.map((person) => {
-      return `
-        <div class="elem">
-          <span>${person.name}</span>
-          <span>${await species(person.species)}
-           from ${await planet(person.homeworld)}
-          </span>
-        </div>
-      `;
-    })
-  ).then((data) => {
-    console.log(data);
-    data.join(", ");
-  });
+const peopleSideNav = async (people) => {
+  let elements = ``;
+  for (const person of people.results) {
+    elements =
+      elements +
+      `
+    <div class="elem">
+      <span>${person.name}</span>
+      <span>${await species(person.species)}
+       from ${await planet(person.homeworld)}
+      </span>
+    </div>
+  `;
+  }
+
+  return elements;
 };
 
 const planet = (url) => {
@@ -54,18 +54,14 @@ const planet = (url) => {
   });
 };
 
-const species = (urls) => {
-  return new Promise((resolve) => {
-    resolve(
-      Promise.all(
-        urls
-          .map(async (url) => {
-            return await specie();
-          })
-          .join(", ")
-      )
-    );
-  });
+const species = async (urls) => {
+  if (urls.length === 0) return "Human";
+  let results = new Array();
+  for (const url of urls) {
+    results.push(await specie(url));
+  }
+
+  return results.join(", ");
 };
 
 const specie = (url) => {
@@ -73,6 +69,7 @@ const specie = (url) => {
     $.ajax({
       url: url,
       success: function (response) {
+        console.log(response);
         resolve(response.name);
       },
     });

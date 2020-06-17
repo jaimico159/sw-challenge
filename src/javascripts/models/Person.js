@@ -13,13 +13,16 @@ class Person {
     this.element.html("Loading ...");
     $.ajax({
       url: baseUrl + this.fetchUrl,
-      success: async function (response) {
+      success: function (response) {
         clazz.element.html("");
         console.log(response);
-        let table = await peopleSideNav(response);
+        let table = peopleSideNav(response);
+        table.then((data) => {
+          console.log(data);
+          clazz.element.append(data);
+          clazz.people = response;
+        });
         console.log(table);
-        clazz.element.append(table);
-        clazz.people = response;
       },
     });
   }
