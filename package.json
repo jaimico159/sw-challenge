@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start:dev": "node ./bin/www",
-    "start": "nodemon --exec babel-node ./bin/www",
+    "start": "node ./bin/www",
+    "start:dev": "nodemon --exec babel-node ./bin/www",
     "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
