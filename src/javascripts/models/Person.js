@@ -16,12 +16,7 @@ class Person {
       success: function (response) {
         clazz.element.html("");
         console.log(response);
-        let table = peopleSideNav(response);
-        table.then((data) => {
-          console.log(data);
-          clazz.element.append(data);
-          clazz.people = response;
-        });
+        let table = peopleSideNav(response, clazz.element);
         console.log(table);
       },
     });

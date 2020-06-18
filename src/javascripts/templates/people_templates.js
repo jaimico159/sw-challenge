@@ -25,27 +25,24 @@ const peopleTable = (people) => {
 </table>`;
 };
 
-const peopleSideNav = async (people) => {
-  let elements = ``;
+const peopleSideNav = async (people, container) => {
   for (const person of people.results) {
-    elements =
-      elements +
+    container.append(
       `
-    <div class="elem">
-      <div class="info">
-        <span class="name">${person.name}</span>
-        <span class="procedence">${await species(person.species)}
-        from ${await planet(person.homeworld)}
-        </span>
+      <div class="elem">
+        <div class="info">
+          <span class="name">${person.name}</span>
+          <span class="procedence">${await species(person.species)}
+          from ${await planet(person.homeworld)}
+          </span>
+        </div>
+        <div class="button-container">
+          <img class="center" src="./images/enter.png" height="10" width="10" alt="Go"></img>
+        </div>
       </div>
-      <div class="button-container">
-        <img class="center" src="./images/enter.png" height="10" width="10" alt="Go"></img>
-      </div>
-    </div>
-  `;
+      `
+    );
   }
-
-  return elements;
 };
 
 const planet = (url) => {
