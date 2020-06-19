@@ -45,6 +45,26 @@ const peopleSideNav = async (people, container) => {
   }
 };
 
+const personInformation = async (people) => {
+  for (const person of people.results) {
+    container.append(
+      `
+      <div class="elem">
+        <div class="info">
+          <span class="name">${person.name}</span>
+          <span class="procedence">${await species(person.species)}
+          from ${await planet(person.homeworld)}
+          </span>
+        </div>
+        <div class="button-container">
+          <img class="center" src="./images/enter.png" height="10" width="10" alt="Go"></img>
+        </div>
+      </div>
+      `
+    );
+  }
+};
+
 const planet = (url) => {
   return new Promise((resolve) => {
     $.ajax({

@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
 }
+
 .sw-nav {
   position: absolute;
   height: 52px;
@@ -26,10 +27,57 @@
   letter-spacing: 0.0125em;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container {
+  position: absolute;
+  margin-top: 52px;
+  left: 350px;
+  height: calc(100% - 52px);
+  width: calc(100% - 350px);
+}
+
+.info-table {
+  margin-right: 100px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-table .header {
+  height: 60px;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  padding-left: 16px;
+  padding-bottom: 6px;
+  padding-top: 32px;
+}
+
+.info-table .detail {
+  height: 49px;
+}
+
+.detail .property {
+  color: #828282;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.detail .value {
+
+}
+
 .side-nav {
   position: absolute;
   width: 350px;
-  height: 100%;
+  height: calc(100% - 52px);
   margin-left: 0px;
   margin-top: 52px;
   display: flex;

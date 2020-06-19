@@ -3,8 +3,30 @@ extends layout
 block content
     
   section
-    div(id= "hello" class="side-nav")
-    
+    div(id="hello" class="side-nav")
+    div(id="person-info" class="info-container" style="display:none")
+      div(class="info-table")
+        div(class="header")
+          span General Information 
+        div(class="detail")
+          span(class="property") Eye Color
+          span(id="eye-color" class="value")
+        div(class="detail")
+          span(class="property") Hair Color
+          span(id="hair-color" class="value")
+        div(class="detail")
+          span(class="property") Skin Color
+          span(id="skil-color" class="value")
+        div(class="detail")
+          span(class="property") Birth Year
+          span(id="birth-year" class="value")
+
+        div(class="header")
+          span Vehicles
+        div(class="detail")
+          span(id="vehicle-name" )
+        div(class="detail")
+          span(id="vehicle-model" )
 
   script(src="./bundle.js")  
 
