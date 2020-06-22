@@ -10,7 +10,8 @@ class Person {
     this.birth_year = json_data.birth_year;
     this.eye_color = json_data.eye_color;
     this.gender = json_data.gender;
-    this.height_color = json_data.height_color;
+    this.hair_color = json_data.hair_color;
+    this.skin_color = json_data.skin_color;
     this.films = json_data.films;
     this.species = json_data.species;
     this.starships = json_data.starships;
@@ -57,9 +58,10 @@ class Person {
     let vehicles_list = $("#vehicles-list");
 
     for (const vehicle of this.vehicles_array) {
-      vehicles_list.append(`
-      <div class="detail"><span>${vehicle.name}</span></div>
-      `);
+      let elem = $(
+        `<div class="detail vehicle-element"><span class="property">${vehicle.name}</span></div>`
+      );
+      vehicles_list.after(elem);
     }
 
     $("#person-info").show();
@@ -76,7 +78,7 @@ class Person {
     skin_color.html("");
     birth_color.html("");
 
-    let vehicles_list = $("#vehicles-list");
+    $(".vehicle-element").remove();
 
     $("#person-info").hide();
   }
