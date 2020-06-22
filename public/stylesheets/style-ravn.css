@@ -60,6 +60,11 @@ section {
 
 .info-table .detail {
   height: 49px;
+  display: flex;
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  align-items: center;
 }
 
 .detail .property {
@@ -68,10 +73,19 @@ section {
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
+  flex-grow: 1;
 }
 
 .detail .value {
-
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.0125em;
+  color: #333333;
+  text-align: right;
+  flex-grow: 1;
 }
 
 .side-nav {
