@@ -26,23 +26,32 @@ const peopleTable = (people) => {
 };
 
 const peopleSideNav = async (people, container) => {
-  for (const person of people.results) {
-    container.append(
-      `
-      <div class="elem">
-        <div class="info">
-          <span class="name">${person.name}</span>
-          <span class="procedence">${await species(person.species)}
-          from ${await planet(person.homeworld)}
-          </span>
-        </div>
-        <div class="button-container">
-          <img class="center" src="./images/enter.png" height="10" width="10" alt="Go"></img>
-        </div>
-      </div>
-      `
-    );
+  for (const person of people) {
+    container.append(await personSideNavElement(person));
+    $(`#person-${person.id}-info-button`).click(() => {
+      console.log("CLICKING");
+      person.hideInfo();
+      person.showInfo();
+    });
   }
+};
+
+const personSideNavElement = async (person) => {
+  let elem = `
+  <div class="elem">
+    <div class="info">
+      <span class="name">${person.name}</span>
+      <span class="procedence">${await species(person.species)}
+      from ${await planet(person.homeworld)}
+      </span>
+    </div>
+    <div id="person-${person.id}-info-button" class="button-container">
+      <img class="center" src="./images/enter.png" height="10" width="10" alt="Go"></img>
+    </div>
+  </div>
+  `;
+
+  return elem;
 };
 
 const personInformation = async (people) => {
