@@ -38,14 +38,14 @@ const peopleSideNav = async (people, container) => {
 
 const personSideNavElement = async (person) => {
   let elem = `
-  <div class="elem">
+  <div class="elem" id="person-${person.id}-info-button">
     <div class="info">
       <span class="name">${person.name}</span>
       <span class="procedence">${await species(person.species)}
       from ${await planet(person.homeworld)}
       </span>
     </div>
-    <div id="person-${person.id}-info-button" class="button-container">
+    <div class="button-container">
       <img class="center" src="./images/enter.png" height="10" width="10" alt="Go"></img>
     </div>
   </div>
